@@ -210,7 +210,7 @@ const loadEvent = function () {
     /* spinner.removeAttribute('hidden'); */
 
     const response = await fetch(`
-        http://api.weatherapi.com/v1/current.json?key=${myKey}&q=${value}&aqi=no
+        https://api.weatherapi.com/v1/current.json?key=${myKey}&q=${value}&aqi=no
         `);
 
     //if the input is invalid
@@ -307,7 +307,7 @@ const loadEvent = function () {
   async function getCity(value) {
     //make request to url
     const response = await fetch(`
-        http://api.weatherapi.com/v1/search.json?key=${myKey}&q=${value}
+        https://api.weatherapi.com/v1/search.json?key=${myKey}&q=${value}
         `);
 
     const cities = await response.json();
